@@ -234,3 +234,26 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../assets/shabnam-font-v5.0.1/Farsi-Digits/Shabnam-FD.eot');
+  src: url('../assets/shabnam-font-v5.0.1/Farsi-Digits/Shabnam-FD.eot?#iefix') format('FontName-opentype'),
+  url('../assets/shabnam-font-v5.0.1/Farsi-Digits/Shabnam-FD.woff') format('woff'),
+  url('../assets/shabnam-font-v5.0.1/Farsi-Digits/Shabnam-FD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../assets/open-sans/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ion-font-family: Shabnam, serif;
+  --ion-default-font: Shabnam, serif;
+}
