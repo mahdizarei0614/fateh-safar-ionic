@@ -32,7 +32,10 @@
               },
               "src/manifest.json"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": [],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
@@ -66,6 +69,53 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "production-landing": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.landing.module.ts"
+                },
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.landing.module.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development-landing": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.landing.module.ts"
+                },
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.landing.module.ts"
+                }
+              ]
             },
             "ci": {
               "progress": false
@@ -115,7 +165,10 @@
               },
               "src/manifest.json"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -159,6 +212,40 @@
               "extractLicenses": false,
               "vendorChunk": true
             },
+            "production-landing": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.landing.module.ts"
+                },
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.landing.module.ts"
+                }
+              ]
+            },
+            "development-landing": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.landing.module.ts"
+                },
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.landing.module.ts"
+                }
+              ]
+            },
             "ci": {}
           },
           "defaultConfiguration": "production"
@@ -167,12 +254,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "app:build:development",
-              "serverTarget": "app:server:development"
+              "browserTarget": "app:build:development-landing",
+              "serverTarget": "app:server:development-landing"
             },
             "production": {
-              "browserTarget": "app:build:production",
-              "serverTarget": "app:server:production"
+              "browserTarget": "app:build:production-landing",
+              "serverTarget": "app:server:production-landing"
             }
           },
           "defaultConfiguration": "development"

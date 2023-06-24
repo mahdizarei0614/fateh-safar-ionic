@@ -1,0 +1,31 @@
+.segment {
+  --background: transparent;
+
+  ion-segment-button {
+    --color: var(--ion-color-medium);
+    --color-checked: var(--ion-text-color);
+    --background: transparent;
+    --background-checked: transparent;
+    --background-focused: transparent;
+
+    &::part(indicator) {
+      border-bottom: 1px solid;
+      border-color: var(--ion-color-medium);
+      --indicator-color: transparent;
+      --indicator-box-shadow: none;
+    }
+  }
+}
+
+.swiper-slide {
+  transition: .3s;
+}
+
+.swiper-slide-next, .swiper-slide-prev {
+  transform: scale(.95, .85);
+  opacity: .6;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px!important;
+}

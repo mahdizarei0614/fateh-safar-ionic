@@ -1,0 +1,20 @@
+<ion-item
+  [button]="!selectionStyle"
+  [lines]="isLast ? 'none' : 'full'"
+  [detailIcon]="rtlService.isRtl ? 'chevron-back' : 'chevron-forward'">
+  <ion-avatar
+    slot="start"
+    class="p-[1px] w-[42px] h-[42px] border-2 status"
+    [class.online]="onlineStatus === 'online'"
+    [class.busy]="onlineStatus === 'busy'">
+    <fateh-skeleton-image
+      [textAvatar]="'' + friend.name?.charAt(0)"
+      [src]="''"></fateh-skeleton-image>
+  </ion-avatar>
+  <ion-label>{{ friend.name }}</ion-label>
+  <ion-checkbox
+    *ngIf="selectionStyle"
+    slot="end"
+    [value]="friend.matrixId"
+    (ionChange)="change($event)"></ion-checkbox>
+</ion-item>

@@ -1,0 +1,31 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ 'settingsPage.header' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        [icon]="!rtlService.isRtl ? 'chevron-back' : 'chevron-forward'"
+        default-href="#"
+        text=""
+        style="color: var(--ion-text-color)"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="!isDesktop" slot="end">
+      <ion-button>
+        <ion-icon
+          slot="icon-only"
+          style="color: var(--ion-text-color)"
+          name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div *ngIf="isDesktop; else mobileTemplate" class="sidebyside-container">
+    <fateh-settings-list class="sidebyside-sidebar"></fateh-settings-list>
+    <div class="sidebyside-inner">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <ng-template #mobileTemplate>
+    <fateh-settings-list></fateh-settings-list>
+  </ng-template>
+</ion-content>

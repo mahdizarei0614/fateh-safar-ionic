@@ -1,0 +1,246 @@
+{
+  "loginPage": {
+    "header": "Login",
+    "phrases": {
+      "registerButtonLabel": "Dont have an account?",
+      "phoneNumberLabel": "Phone Number",
+      "usernameLabel": "Username",
+      "serverLabel": "Server Address",
+      "phoneNumberHelper": "Enter your phone number without leading zero",
+      "phoneNumberError": "Invalid phone number",
+      "passwordLabel": "Password",
+      "passwordHelper": "Enter your password",
+      "passwordError": "Invalid password",
+      "loginButton": "Login",
+      "registerNowButton": "Register Now",
+      "invalidCredentials": "Invalid Credentials"
+    }
+  },
+  "otpModal": {
+    "header": "Phone Number Confirmation",
+    "phrases": {
+      "labelPhrase": "Enter the OTP sent to {{value}}:",
+      "confirmButton": "Confirm"
+    }
+  },
+  "homePage": {
+    "header": "Home",
+    "greeting": "Hi, {{value}}",
+    "segments": {
+      "account": "Account",
+      "transactions": "Transactions"
+    },
+    "chips": {
+      "addMoney": "Add Money",
+      "sendMoney": "Send",
+      "receiveMoney": "Receive",
+      "requestMoney": "Request"
+    },
+    "lists": {
+      "headers": {
+        "transactions": "Latest Transactions"
+      },
+      "categories": {
+        "onlineShopping": "Online shopping",
+        "gift": "Gift",
+        "cardToCard": "Transfer to card",
+        "car": "Automobile",
+        "clothing": "Clothing",
+        "education": "Education",
+        "food": "Transfer to card",
+        "health": "Healthcare",
+        "pos": "POS",
+        "home": "Home"
+      },
+      "seeAllButton": "See All"
+    }
+  },
+  "statsPage": {
+    "header": "Statistics",
+    "segments": {
+      "balance": {
+        "week": "Week",
+        "month": "Month",
+        "year": "Year"
+      }
+    }
+  },
+  "transactionsPage": {
+    "header": "Transactions",
+    "segments": {
+      "type": {
+        "all": "All",
+        "in": "In",
+        "out": "Out"
+      }
+    }
+  },
+  "friendsPage": {
+    "header": "Friends",
+    "listTop": {
+      "header": "Management",
+      "itemChatInvitations": "Chat Invitations",
+      "itemPendingRequests": "Pending Requests",
+      "noInvitations": "No Invitations"
+    },
+    "listFriends": {
+      "header": "Friends List"
+    }
+  },
+  "conversationsPage": {
+    "header": "Conversations",
+    "segments": {
+      "all": "All",
+      "p2p": "Chats",
+      "groups": "Groups",
+      "channels": "Channels",
+      "bots": "Bots"
+    },
+    "phrases": {
+      "noChatFound": "No results found!",
+      "noChatAll": "No Conversations Yet",
+      "noChatP2P": "No Chats Yet",
+      "noChatGroups": "No Groups Yet",
+      "noChatChannel": "No Channels Yet",
+      "noChatBots": "No Bots Yet",
+      "createRoom": "New Room"
+    }
+  },
+  "createRoomModal": {
+    "createRoom": "Create New Room",
+    "selectInvitees": "Invite Friends",
+    "phrases": {
+      "roomName": "Room Name",
+      "roomNamePlaceholder": "Enter a name for the room",
+      "topic": "Topic (optional)",
+      "topicPlaceholder": "Enter a topic for the room"
+    }
+  },
+  "addCardModal": {
+    "header": "Add Card",
+    "phrases": {
+      "cardNumber": "Card Number",
+      "cardName": "Card Name"
+    }
+  },
+  "sendMoneyModal": {
+    "header": "Send money",
+    "phrases": {
+      "amount": "Amount (Toman)",
+      "amountHelper": "Enter an amount between {{min}} and {{max}}.",
+      "amountErrorNotLowerThan": "Amount can not be lower than {{min}}.",
+      "amountErrorNotGreaterThan": "Amount can not be greater than {{max}}.",
+      "confirmPhrase": "Do you confirm?",
+      "transactionTitle": "Send {{amount}} Toman to {{receiver}}",
+      "selectContactLabel": "Send to",
+      "selectResourceLabel": "From Resource"
+    }
+  },
+  "requestMoneyModal": {
+    "header": "Request money",
+    "phrases": {
+      "amount": "Amount (Toman)",
+      "amountHelper": "Enter an amount between {{min}} and {{max}}.",
+      "amountErrorNotLowerThan": "Amount can not be lower than {{min}}.",
+      "amountErrorNotGreaterThan": "Amount can not be greater than {{max}}.",
+      "requestButton": "Request",
+      "confirmPhrase": "Do you confirm?",
+      "transactionTitle": "Request {{amount}} Toman from {{from}}",
+      "selectContactLabel": "Request from"
+    }
+  },
+  "createPollModal": {
+    "header": "Poll",
+    "phrases": {
+      "question": "Question",
+      "questionPlaceholder": "Your desired question",
+      "options": "Options",
+      "optionPlaceholder": "Option title",
+      "send": "Create Poll"
+    }
+  },
+  "settingsPage": {
+    "header": "Settings",
+    "listGeneral": {
+      "header": "General",
+      "itemLanguage": "Language"
+    },
+    "listAppearance": {
+      "header": "Appearance",
+      "itemDarkTheme": "Dark Theme"
+    },
+    "subPages": {
+      "languagesPage": {
+        "header": "Select a language"
+      }
+    },
+    "phrases": {
+      "logoutButtonShort": "Logout",
+      "logoutButton": "Logout",
+      "logoutActionSheetHeader": "Are you sure you want to log out?"
+    }
+  },
+  "messagesPage": {
+    "textareaPlaceholder": "Message...",
+    "moreIsTypingPhrase": " and {{value}} others",
+    "status": {
+      "member": "members",
+      "online": "Online",
+      "busy": "Busy",
+      "doNotDisturb": "Do not disturb",
+      "isTyping": "is typing",
+      "lastSeen": "Last seen",
+      "lastSeenRecently": "Last seen recently"
+    },
+    "phrases": {
+      "create": "{{value}} created the room",
+      "invite": "{{value}} did invited to the room",
+      "leave": "{{value}} left the room",
+      "join": "{{value}} joined the room",
+      "sendMoneyLabel": "Send Money",
+      "transferredMoneyTo": "Transferred to {{receiver}}",
+      "requestMoneyFrom": "Requested from {{from}}",
+      "receipt": "Receipt",
+      "requestMoneyLabel": "Request Money",
+      "createPoll": "New Poll",
+      "sendLocation": "Send Location",
+      "fromGallery": "From gallery",
+      "fromCamera": "From camera",
+      "redaction": "Deleted message"
+    }
+  },
+  "shared": {
+    "searchbarPlaceholder": "Search",
+    "phrases": {
+      "cancelButton": "Cancel",
+      "deleteButton": "Delete",
+      "replyButton": "Reply",
+      "acceptButton": "Accept",
+      "confirmButton": "Confirm",
+      "confirmAllButton": "Confirm All",
+      "closeButton": "Close",
+      "rejectButton": "Reject",
+      "backButton": "Back",
+      "chooseButton": "Choose",
+      "amountToman": "{{amount}} Toman",
+      "deleteMessage": "Are you sure you want to delete this chat?",
+      "friendRequestHeader": "Friend request from {{value}}",
+      "friendRequestMessage": "Friend request from {{value}}",
+      "transactionAmount": "Transaction Amount",
+      "transactionDate": "Transaction Date",
+      "transactionId": "Transaction Id",
+      "requestId": "Request Id",
+      "from": "From",
+      "to": "To",
+      "share": "Share",
+      "copied": "Copied!",
+      "selectPlaceholder": "Choose",
+      "creator": "Creator",
+      "send": "Send",
+      "read": "Read",
+      "goodMorning": "Good morning",
+      "goodAfternoon": "Good afternoon",
+      "goodEvening": "Good evening"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<ion-header *ngIf="!isDesktop()" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons style="width: 38px" slot="start">
+      <ion-back-button
+        text=""
+        style="color: var(--ion-text-color)"
+        [icon]="
+          !rtlService.isRtl ? 'chevron-back' : 'chevron-forward'
+        "></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{
+      'settingsPage.subPages.languagesPage.header' | translate
+    }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="!isDesktop()" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{
+        'settingsPage.subPages.languagesPage.header' | translate
+      }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-radio-group
+      [value]="currentLanguage"
+      (ionChange)="changeLangEvent($event)">
+      <ion-item>
+        <ion-label>فارسی</ion-label>
+        <ion-radio slot="end" value="fa"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>English</ion-label>
+        <ion-radio slot="end" value="en"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
+<ion-header *ngIf="isDesktop()" collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">{{
+      'settingsPage.subPages.languagesPage.header' | translate
+    }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-list *ngIf="isDesktop()">
+  <ion-radio-group
+    [value]="currentLanguage"
+    (ionChange)="changeLangEvent($event)">
+    <ion-item>
+      <ion-label>فارسی</ion-label>
+      <ion-radio slot="end" value="fa"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>English</ion-label>
+      <ion-radio slot="end" value="en"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
