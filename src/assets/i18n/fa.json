@@ -1,0 +1,247 @@
+{
+  "loginPage": {
+    "header": "ورود",
+    "phrases": {
+      "registerButtonLabel": "حساب کاربری نداری؟",
+      "phoneNumberLabel": "شماره تلفن",
+      "usernameLabel": "یوزر",
+      "serverLabel": "آدرس سرور",
+      "phoneNumberHelper": "شماره تلفنت رو بدون صفر وارد کن",
+      "phoneNumberError": "شماره تلفن اشتباه است",
+      "passwordLabel": "رمز عبور",
+      "passwordHelper": "رمز عبورت رو وارد کن",
+      "passwordError": "رمز عبور اشتباه است",
+      "loginButton": "ورود",
+      "registerNowButton": "حالا ثبت نام کن",
+      "invalidCredentials": "شماره تلفن یا رمزت اشتباهه!"
+    }
+  },
+  "otpModal": {
+    "header": "تایید شماره همراه",
+    "phrases": {
+      "labelPhrase": "کد ارسال شده به شماره {{value}} را وارد کنید:",
+      "confirmButton": "اعتبارسنجی"
+    }
+  },
+  "homePage": {
+    "header": "خانه",
+    "greeting": "سلام، {{value}}",
+    "segments": {
+      "account":  "حساب",
+      "transactions": "تراکنش‌ها"
+    },
+    "chips": {
+      "addMoney": "افزایش موجودی",
+      "sendMoney": "واریز",
+      "receiveMoney": "دریافت",
+      "requestMoney": "درخواست"
+    },
+    "lists": {
+      "headers": {
+        "transactions": "تراکنش‌های اخیر"
+      },
+      "categories": {
+        "onlineShopping": "خرید آنلاین",
+        "gift": "هدیه",
+        "cardToCard": "کارت به کارت",
+        "car": "خودرو",
+        "clothing": "البسه",
+        "education": "تحصیلات",
+        "food": "غذا",
+        "health": "بهداشت و سلامت",
+        "pos": "دستگاه پوز",
+        "home": "خانه"
+      },
+      "seeAllButton": "مشاهده همه"
+    }
+  },
+  "statsPage": {
+    "header": "آمار",
+    "segments": {
+      "balance": {
+        "week": "هفته",
+        "month": "ماه",
+        "year": "سال"
+      }
+    }
+  },
+  "transactionsPage": {
+    "header": "تراکنش‌ها",
+    "segments": {
+      "type": {
+        "all": "همه",
+        "in": "ورودی",
+        "out": "خروجی"
+      }
+    }
+  },
+  "friendsPage": {
+    "header": "دوستان",
+    "listTop": {
+      "header": "مدیریت",
+      "itemChatInvitations": "چت‌های دعوت شده",
+      "itemPendingRequests": "درخواست های ارسالی",
+      "noInvitations": "دعوت‌نامه‌ای نداری."
+    },
+    "listFriends": {
+      "header": "لیست دوستان"
+    }
+  },
+  "conversationsPage": {
+    "header": "گفتگوها",
+    "segments": {
+      "all": "همه",
+      "p2p": "شخصی",
+      "groups": "گروه‌ها",
+      "channels": "کانال‌ها",
+      "bots": "بات‌ها"
+    },
+    "phrases": {
+      "noChatFound": "چیزی پیدا نکردم!",
+      "noChatAll": "گفتگویی نداری.",
+      "noChatP2P": "چت شخصی نداری.",
+      "noChatGroups": "گروهی نداری.",
+      "noChatChannel": "کانالی نداری.",
+      "noChatBots": "باتی نداری.",
+      "createRoom": "اتاق جدید"
+    }
+  },
+  "createRoomModal": {
+    "createRoom": "ساخت اتاق جدید",
+    "selectInvitees": "دعوت دوستان",
+    "phrases": {
+      "roomName": "نام اتاق",
+      "roomNamePlaceholder": "یک نام برای اتاق وارد کن",
+      "topic": "توضیحات (اختیاری)",
+      "topicPlaceholder": "توضیحی برای اتاق"
+    }
+  },
+  "addCardModal": {
+    "header": "افزودن کارت",
+    "phrases": {
+      "cardNumber": "شماره کارت",
+      "cardName": "نام کارت"
+    }
+  },
+  "settingsPage": {
+    "header": "تنظیمات",
+    "listGeneral": {
+      "header": "اصلی",
+      "itemLanguage": "زبان"
+    },
+    "listAppearance": {
+      "header": "ظاهر",
+      "itemDarkTheme": "تم تاریک"
+    },
+    "subPages": {
+      "languagesPage": {
+        "header": "زبان را انتخاب کنید"
+      }
+    },
+    "phrases": {
+      "logoutButtonShort": "خروج",
+      "logoutButton": "خروج از حساب کاربری",
+      "logoutActionSheetHeader": "مطمئنی می‌خوای خارج بشی؟"
+    }
+  },
+  "sendMoneyModal": {
+    "header": "واریز پول",
+    "phrases": {
+      "amount": "مقدار (تومان)",
+      "amountHelper": "مقدار وارد شده باید بین {{min}} و {{max}} باشه.",
+      "amountErrorNotLowerThan": "مقدار نمی‌تونه از {{min}} کمتر باشه.",
+      "amountErrorNotGreaterThan": "مقدار نمی‌تونه از {{max}} بیشتر باشه.",
+      "confirmPhrase": "تایید میکنی؟",
+      "transactionTitle": "واریز {{amount}} تومان به {{receiver}}",
+      "selectContactLabel": "واریز به",
+      "selectResourceLabel": "از مبدأ"
+    }
+  },
+  "requestMoneyModal": {
+    "header": "درخواست پول",
+    "phrases": {
+      "amount": "مقدار (تومان)",
+      "amountHelper": "مقدار وارد شده باید بین {{min}} و {{max}} باشه.",
+      "amountErrorNotLowerThan": "مقدار نمی‌تونه از {{min}} کمتر باشه.",
+      "amountErrorNotGreaterThan": "مقدار نمی‌تونه از {{max}} بیشتر باشه.",
+      "requestButton": "درخواست",
+      "confirmPhrase": "تایید میکنی؟",
+      "transactionTitle": "درخواست {{amount}} تومان از {{from}}",
+      "selectContactLabel": "درخواست از"
+    }
+  },
+  "createPollModal": {
+    "header": "نظرسنجی",
+    "phrases": {
+      "question": "سوال",
+      "questionPlaceholder": "سوال مورد نظرتو بنویس",
+      "options": "گزینه‌ها",
+      "optionPlaceholder": "عنوان گزینه",
+      "send": "ایجاد نظرسنجی"
+    }
+  },
+  "messagesPage": {
+    "moreIsTypingPhrase": " و {{value}} نفر دیگر",
+    "textareaPlaceholder": "پیام خود را بنویسید",
+    "status": {
+      "member": "عضو",
+      "online": "آنلاین",
+      "busy": "مشغول",
+      "doNotDisturb": "خارج از دسترس",
+      "isTyping": "در حال نوشتن",
+      "lastSeen":  "آخرین بازدید",
+      "lastSeenRecently":  "آخرین بازدید اخیرا"
+    },
+    "phrases": {
+      "create": "{{value}} اتاق را ساخت",
+      "invite": "{{value}} به اتاق دعوت شد",
+      "leave": "{{value}} اتاق را ترک کرد",
+      "join": "{{value}} به اتاق اضافه شد",
+      "sendMoneyLabel": "واریز پول",
+      "transferredMoneyTo": "واریز به {{receiver}}",
+      "requestMoneyFrom": "درخواست از {{from}}",
+      "requestMoneyFromAcceptor": "از طرف {{from}}",
+      "receipt": "رسید",
+      "requestMoneyLabel": "درخواست پول",
+      "createPoll": "نظرسنجی",
+      "sendLocation": "موقعیت مکانی",
+      "fromGallery": "از گالری",
+      "fromCamera": "از دوربین",
+      "redaction": "پیام حذف شده"
+    }
+  },
+  "shared": {
+    "searchbarPlaceholder": "جستجو",
+    "phrases": {
+      "cancelButton": "لغو",
+      "deleteButton": "حذف",
+      "replyButton": "پاسخ",
+      "acceptButton": "قبول",
+      "confirmButton": "تایید",
+      "confirmAllButton": "تایید همه",
+      "closeButton": "بستن",
+      "rejectButton": "رد",
+      "backButton": "بازگشت",
+      "chooseButton": "انتخاب",
+      "amountToman": "{{amount}} تومان",
+      "deleteMessage": "آیا از حذف کردن این چت اطمینان دارید؟",
+      "friendRequestHeader": "درخواست دوستی از طرف {{value}}",
+      "friendRequestMessage": "درخواست دوستی از طرف {{value}}",
+      "transactionAmount": "مبلغ تراکنش",
+      "transactionDate": "تاریخ تراکنش",
+      "transactionId": "شماره پیگیری",
+      "requestId": "شماره درخواست",
+      "from": "از",
+      "to": "به",
+      "share": "اشتراک گزاری",
+      "copied": "کپی شد!",
+      "selectPlaceholder": "انتخاب",
+      "creator": "سازنده",
+      "send": "ارسال",
+      "read": "خواندن",
+      "goodMorning": "صبح بخیر",
+      "goodAfternoon": "ظهر بخیر",
+      "goodEvening": "عصر بخیر"
+    }
+  }
+}

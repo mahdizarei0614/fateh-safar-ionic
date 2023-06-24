@@ -4,7 +4,7 @@
   "overrides": [
     {
       "files": [
-        "*.ts"
+        "src/*.ts"
       ],
       "parserOptions": {
         "project": [
@@ -47,7 +47,7 @@
     },
     {
       "files": [
-        "*.html"
+        "src/*.html"
       ],
       "extends": [
         "plugin:@angular-eslint/template/recommended",

@@ -1,0 +1,48 @@
+<div
+  *ngIf="isDesktop"
+  style="
+    position: sticky;
+    top: 0;
+    background: var(--ion-background-color);
+    z-index: 1;
+  ">
+  <div *ngIf="isDesktop" class="spacer"></div>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{
+        'settingsPage.header' | translate
+      }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon
+            slot="icon-only"
+            style="color: var(--ion-text-color)"
+            name="ellipsis-horizontal"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+<ion-list>
+  <ng-container *ngFor="let category of categories">
+    <ion-list-header>
+      <ion-label>{{ category.categoryKey | translate }}</ion-label>
+    </ion-list-header>
+    <ion-item
+      [button]="item.type === 'link'"
+      *ngFor="let item of category.items"
+      [routerLink]="item.type === 'link' ? item.href : undefined"
+      [detailIcon]="rtlService.isRtl ? 'chevron-back' : 'chevron-forward'">
+      <ion-ripple-effect></ion-ripple-effect>
+      <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>
+      <ion-label>{{ item.itemKey | translate }}</ion-label>
+      <ion-toggle
+        *ngIf="item.type === 'toggle'"
+        slot="end"
+        [dir]="rtlService.isRtl ? 'rtl' : 'ltr'"
+        [checked]="item.toggleIsChecked()"
+        (ionChange)="item.toggleFunction($event)"></ion-toggle>
+    </ion-item>
+  </ng-container>
+</ion-list>
+<div *ngIf="isDesktop" class="spacer"></div>

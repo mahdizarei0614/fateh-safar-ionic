@@ -5,14 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./tabs/tabs.module').then(m => m.TabsPageModule),
+      import('./modules/tabs/tabs.module').then(m => m.TabsModule),
   },
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
-      initialNavigation: 'enabledBlocking',
     }),
   ],
   exports: [RouterModule],

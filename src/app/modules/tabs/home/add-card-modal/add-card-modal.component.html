@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="close()">{{
+        'shared.phrases.closeButton' | translate
+      }}</ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'addCardModal.header' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()">{{
+        'shared.phrases.confirmButton' | translate
+      }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">{{
+        'addCardModal.phrases.cardName' | translate
+      }}</ion-label>
+      <ion-input [(ngModel)]="card.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">{{
+        'addCardModal.phrases.cardNumber' | translate
+      }}</ion-label>
+      <ion-input [(ngModel)]="card.number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">{{
+        'addCardModal.phrases.cardNumber' | translate
+      }}</ion-label>
+    </ion-item>
+    <ion-datetime presentation="month-year"></ion-datetime>
+  </ion-list>
+</ion-content>

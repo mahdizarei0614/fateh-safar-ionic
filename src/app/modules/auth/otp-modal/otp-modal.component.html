@@ -1,0 +1,91 @@
+<ion-content class="ion-padding">
+  <ion-header class="mb-20" collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ 'otpModal.header' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-row class="sm:px-20 md:px-40 mb-8">
+    <ion-label>{{
+      'otpModal.phrases.labelPhrase' | translate : { value: email }
+    }}</ion-label>
+  </ion-row>
+  <ion-row class="sm:px-20 md:px-40 flex-row-reverse">
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp1
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp1"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp1 = ''"
+        [ngClass]="OTP.otp1?.length ? 'filled' : ''"
+        (keyup)="otpController($event, otp2, '', 0)"></ion-input>
+    </ion-col>
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp2
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp2"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp2 = ''"
+        [ngClass]="OTP.otp2?.length ? 'filled' : ''"
+        (keyup)="otpController($event, otp3, otp1, 1)"></ion-input>
+    </ion-col>
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp3
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp3"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp3 = ''"
+        [ngClass]="OTP.otp3?.length ? 'filled' : ''"
+        (keyup)="otpController($event, otp4, otp2, 2)"></ion-input>
+    </ion-col>
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp4
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp4"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp4 = ''"
+        [ngClass]="OTP.otp4?.length ? 'filled' : ''"
+        (keyup)="otpController($event, otp5, otp3, 3)"></ion-input>
+    </ion-col>
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp5
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp5"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp5 = ''"
+        [ngClass]="OTP.otp5?.length ? 'filled' : ''"
+        (keyup)="otpController($event, otp6, otp4, 4)"></ion-input>
+    </ion-col>
+    <ion-col class="p-1">
+      <ion-input
+        class="border-2 rounded-md text-3xl text-center"
+        #otp6
+        required="true"
+        maxLength="1"
+        [(ngModel)]="OTP.otp6"
+        [disabled]="submitting"
+        (ionFocus)="OTP.otp6 = ''"
+        [ngClass]="OTP.otp6?.length ? 'filled' : ''"
+        (keyup)="otpController($event, '', otp5, 5)"></ion-input>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<div class="ion-padding">
+  <ion-button expand="block" (click)="submit()">{{
+    'otpModal.phrases.confirmButton' | translate
+  }}</ion-button>
+</div>

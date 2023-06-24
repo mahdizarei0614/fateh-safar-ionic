@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-list-header *ngIf="!isDesktop">
+    <ion-label>{{ 'friendsPage.listFriends.header' | translate }}</ion-label>
+  </ion-list-header>
+  <ng-container *ngIf="friends?.length">
+    <ion-list>
+      <fateh-friend
+        *ngFor="let friend of friends; let index = index"
+        [friend]="friend"
+        [isLast]="index === friends.length - 1"
+        [selectionStyle]="selectionStyle"
+        (changeSelection)="changeSelection($event)"></fateh-friend>
+    </ion-list>
+  </ng-container>
+</ion-list>

@@ -1,0 +1,26 @@
+<ion-tabs #tabs id="tabs">
+  <ion-tab-bar
+    [translucent]="true"
+    [dir]="rtlService.isRtl ? 'rtl' : 'ltr'"
+    slot="bottom"
+    [style]="!tabsService.isShown() ? 'display: none;' : ''">
+    <ion-tab-button tab="friends">
+      <ion-icon
+        [name]="isActive('friends') ? 'people' : 'people-outline'"></ion-icon>
+      <ion-label>{{ 'friendsPage.header' | translate }}</ion-label>
+      <ion-badge color="medium" *ngIf="false"></ion-badge>
+    </ion-tab-button>
+    <ion-tab-button tab="home">
+      <ion-icon [name]="isActive('home') ? 'home' : 'home-outline'"></ion-icon>
+      <ion-label>{{ 'homePage.header' | translate }}</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="settings">
+      <ion-icon
+        [name]="
+          isActive('settings') ? 'chatbubbles' : 'chatbubbles-outline'
+        "></ion-icon>
+      <ion-label>{{ 'conversationsPage.header' | translate }}</ion-label>
+      <ion-badge color="medium" *ngIf="false"></ion-badge>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

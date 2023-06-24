@@ -1,0 +1,16 @@
+<ion-list>
+  <!--  <ion-list-header *ngIf="!isDesktop">-->
+  <!--    <ion-label>{{'friendsPage.listTop.header' | translate}}</ion-label>-->
+  <!--  </ion-list-header>-->
+  <ion-item
+    lines="none"
+    button
+    [detailIcon]="rtlService.isRtl ? 'chevron-back' : 'chevron-forward'">
+    <ion-ripple-effect></ion-ripple-effect>
+    <ion-icon name="mail-unread" slot="start"></ion-icon>
+    <ion-label>{{
+      'friendsPage.listTop.itemChatInvitations' | translate
+    }}</ion-label>
+    <ion-badge slot="end"></ion-badge>
+  </ion-item>
+</ion-list>

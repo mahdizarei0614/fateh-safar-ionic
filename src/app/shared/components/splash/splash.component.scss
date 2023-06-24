@@ -1,0 +1,14 @@
+.loaded {
+  animation: myAnim .5s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 1;
+    transform: scale(100%, 100%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(150%, 150%);
+  }
+}

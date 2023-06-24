@@ -1,0 +1,10 @@
+ion-input {
+  --padding-end: 0;
+  --padding-start: 0;
+  border-color: var(--ion-color-medium);
+  transition: .3s;
+
+  &.filled {
+    border-color: var(--ion-color-primary);
+  }
+}

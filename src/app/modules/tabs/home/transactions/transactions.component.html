@@ -1,0 +1,106 @@
+<ion-header [translucent]="true" collapse="fade">
+  <ion-toolbar>
+    <ion-title>{{ 'transactionsPage.header' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text=""
+        style="color: var(--ion-text-color)"
+        [icon]="
+          !rtlService.isRtl ? 'chevron-back' : 'chevron-forward'
+        "></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar style="position: relative">
+    <ion-segment
+      class="segment"
+      [value]="segmentValue"
+      [scrollable]="true"
+      (ionChange)="changeCategory($event)">
+      <ion-segment-button value="all">
+        <ion-label>{{
+          'transactionsPage.segments.type.all' | translate
+        }}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="in">
+        <ion-label>{{
+          'transactionsPage.segments.type.in' | translate
+        }}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="out">
+        <ion-label>{{
+          'transactionsPage.segments.type.out' | translate
+        }}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-toolbar style="position: relative">
+    <ion-searchbar
+      class="max-w-[440px] mx-auto"
+      [placeholder]="'shared.searchbarPlaceholder' | translate"
+      (ionChange)="searchTransactions($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="max-w-[440px] mx-auto">
+    <!--    <div class="flex justify-center">-->
+    <!--    </div>-->
+    <ion-list>
+      <ng-container *ngIf="!transactionsList.length; else transactions">
+        <ion-item
+          style="--height: 62px"
+          *ngFor="let i of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]">
+          <ion-avatar slot="start">
+            <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label>
+            <h3 style="width: 50%">
+              <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+            </h3>
+            <p style="width: 20%; margin-bottom: 2px">
+              <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+            </p>
+          </ion-label>
+          <ion-text style="height: 19px; width: 20%" slot="end">
+            <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+          </ion-text>
+        </ion-item>
+      </ng-container>
+      <ng-template #transactions>
+        <ion-item
+          @enterAnimation
+          *ngFor="
+            let t of transactionsList
+              | filterTransactions : searchValue : categories
+          "
+          button
+          [detail]="false">
+          <ion-avatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              [src]="sharedService.getTransactionCategoryIcon(t.category)" />
+          </ion-avatar>
+          <ion-label>
+            <h3
+              [innerHTML]="
+                'homePage.lists.categories.' + t.category
+                  | translate
+                  | highlightText : searchValue
+              "></h3>
+            <p>{{ t.time | threadTime }}</p>
+          </ion-label>
+          <ion-text
+            class="text-sm"
+            dir="ltr"
+            slot="end"
+            [color]="t.type === 'out' ? 'danger' : 'success'">
+            {{ t.type === 'out' ? '- ' : '+ ' }}
+            {{
+              'shared.phrases.amountToman'
+                | translate : { amount: (t.amount | number : '1.') }
+            }}
+          </ion-text>
+        </ion-item>
+      </ng-template>
+    </ion-list>
+  </div>
+</ion-content>

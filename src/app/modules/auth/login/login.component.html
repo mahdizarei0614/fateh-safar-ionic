@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ 'loginPage.header' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item fill="solid">
+    <ion-label position="floating">{{
+      'loginPage.phrases.phoneNumberLabel' | translate
+    }}</ion-label>
+    <ion-input
+      [type]="'email'"
+      [(ngModel)]="email"
+      autocomplete="email"></ion-input>
+    <ion-note slot="helper">{{
+      'loginPage.phrases.phoneNumberHelper' | translate
+    }}</ion-note>
+    <ion-note slot="error">{{
+      'loginPage.phrases.phoneNumberError' | translate
+    }}</ion-note>
+  </ion-item>
+</ion-content>
+<div class="ion-padding">
+  <ion-button expand="block" (click)="login()">{{
+    'loginPage.phrases.loginButton' | translate
+  }}</ion-button>
+  <ion-item lines="none" [dir]="rtlService.isRtl ? 'rtl' : 'ltr'">
+    <ion-label color="medium">{{
+      'loginPage.phrases.registerButtonLabel' | translate
+    }}</ion-label>
+    <ion-button fill="clear" slot="end" size="default" (click)="register()">{{
+      'loginPage.phrases.registerNowButton' | translate
+    }}</ion-button>
+  </ion-item>
+</div>

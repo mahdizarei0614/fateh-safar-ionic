@@ -1,0 +1,17 @@
+<img
+  class="w-full h-full border-round"
+  [style]="loaded && src ? '' : 'display: none'"
+  [src]="src"
+  (load)="loadCompleted()"
+  [alt]="textAvatar"
+  (error)="default()" />
+<ion-skeleton-text
+  class="w-full h-full border-round"
+  *ngIf="!loaded"
+  [animated]="true"></ion-skeleton-text>
+<div
+  *ngIf="loaded && !src && textAvatar"
+  class="w-full h-full border-round bg-gray-400 text-white font-bold text-[1.5rem] flex justify-center items-center"
+  style="line-height: 28px">
+  <span class="h-[1.8rem]">{{ textAvatar.toUpperCase() }}</span>
+</div>
